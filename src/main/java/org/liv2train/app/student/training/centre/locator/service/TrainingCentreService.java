@@ -7,6 +7,7 @@ import org.liv2train.app.student.training.centre.locator.request.dto.TrainingCen
 
 public interface TrainingCentreService {
 	
-	public TrainingCentre createTrainingCentre(TrainingCentreRequestDTO trainingCentreRequestDTO);
+	public TrainingCentre createTrainingCentre(TrainingCentreRequestDTO trainingCentreRequestDTO) throws Exception;
 	public List<TrainingCentre> getAllTrainingCentre();
+	
 }

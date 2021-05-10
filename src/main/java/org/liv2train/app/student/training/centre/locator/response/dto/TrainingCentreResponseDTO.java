@@ -1,5 +1,6 @@
 package org.liv2train.app.student.training.centre.locator.response.dto;
 
+import java.time.Instant;
 import java.util.List;
 
 import lombok.Getter;
@@ -10,12 +11,13 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class TrainingCentreResponseDTO {
-	String centreName;
-	String centreCode;
-	Integer studentCapacity;
-	List<String> coursesOfferd;
-	AddressDTO address;
-	String email;
-	String phoneNumber;
+	private String centreName;
+	private String centreCode;
+	private Integer studentCapacity;
+	private List<String> coursesOfferd;
+	private AddressDTO address;
+	private String email;
+	private String phoneNumber;
+	private String createdOn;
 
 }

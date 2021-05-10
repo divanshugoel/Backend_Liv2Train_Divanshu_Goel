@@ -14,17 +14,25 @@ public class AddressDTO {
 
 	@NotNull(message = "centre address cannot be null ")
 	@NotEmpty(message = "centre address cannot be empty ")
-	String detailedAddress;
+	private String detailedAddress;
 
 	@NotNull(message = "centre city cannot be null ")
 	@NotEmpty(message = "centre city cannot be empty ")
-	String city;
+	private String city;
 
 	@NotNull(message = "centre state cannot be null ")
 	@NotEmpty(message = "centre state cannot be empty ")
-	String state;
+	private String state;
 
 	@NotNull(message = "centre pincode cannot be null ")
 	@NotEmpty(message = "centre pincode cannot be empty ")
-	String pincode;
+	private String pincode;
+
+	@Override
+	public String toString() {
+		return "AddressDTO [detailedAddress=" + detailedAddress + ", city=" + city + ", state=" + state + ", pincode="
+				+ pincode + "]";
+	}
+	
+	
 }

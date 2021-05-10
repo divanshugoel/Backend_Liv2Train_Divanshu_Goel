@@ -13,4 +13,7 @@ public interface TrainingCentreRepository extends CrudRepository<TrainingCentre,
 	@Query("Select trainingCentre from TrainingCentre trainingCentre where trainingCentre.email =:email")
 	Optional<TrainingCentre> findByEmail(String email);
 
+	@Query("Select trainingCentre from TrainingCentre trainingCentre order by createdOn desc")
+	Iterable<TrainingCentre> findAll();
+
 }
