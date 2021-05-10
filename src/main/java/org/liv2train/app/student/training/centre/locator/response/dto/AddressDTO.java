@@ -7,6 +7,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+/**
+ * AddressDTO is the POJO class for sending the address object 
+ * to the trainingCentreResponseDTO. 
+ * 
+ * @author Divanshu_Goel
+ *
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -28,6 +36,17 @@ public class AddressDTO {
 	@NotEmpty(message = "centre pincode cannot be empty ")
 	private String pincode;
 
+	
+	/**
+	 * 
+	 * This method return string representation of the 
+	 * AddressDTO object.
+	 * 
+	 * @return String {@link -> String}.
+	 * @since 1.0
+	 * @version 1.0
+	 
+	 */
 	@Override
 	public String toString() {
 		return "AddressDTO [detailedAddress=" + detailedAddress + ", city=" + city + ", state=" + state + ", pincode="

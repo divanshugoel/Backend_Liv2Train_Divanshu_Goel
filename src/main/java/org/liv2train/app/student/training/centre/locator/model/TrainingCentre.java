@@ -22,6 +22,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+/**
+ * TrainingCentre is the POJO class of the trainingCentre model object
+ * 
+ * It sends trainingCentre object.
+ * 
+ * @author Divanshu_Goel
+ * 
+ */
+
+
 @Getter
 @Setter
 @NoArgsConstructor

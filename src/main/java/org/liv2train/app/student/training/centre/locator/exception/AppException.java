@@ -5,6 +5,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+/**
+ * AppException is a custom exception class for the custom 
+ * exceptions thrown during method calls.
+ * 
+ * @See TrainingCentreServiceImpl 
+ * 
+ * @author Divanshu_Goel
+ *
+ */
+
 @Getter
 @Setter
 @NoArgsConstructor

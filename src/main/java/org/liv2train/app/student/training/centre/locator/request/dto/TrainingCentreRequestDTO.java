@@ -14,6 +14,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+/**
+ * TrainingCentreRequestDTO is the POJO class for sending the request.
+ * 
+ * It sends trainingCentreRequestDTO object. 
+ * 
+ * @author Divanshu_Goel
+ * 
+ */
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -43,6 +53,17 @@ public class TrainingCentreRequestDTO {
 	@Pattern(regexp = "^[7-9][0-9]{9}$", message = "Please enter a valid phone number")
 	private String phoneNumber;
 
+	
+	/**
+	 * 
+	 * This method return string representation of the 
+	 * trainingCentreRequestDTO object.
+	 * 
+	 * @return String {@link -> String}.
+	 * @since 1.0
+	 * @version 1.0
+	 
+	 */
 	@Override
 	public String toString() {
 		return "TrainingCentreRequestDTO [centreName=" + centreName + ", centreCode=" + centreCode

@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.liv2train.app.student.training.centre.locator.exception.AppException;
 import org.liv2train.app.student.training.centre.locator.model.Address;
 import org.liv2train.app.student.training.centre.locator.model.TrainingCentre;
 import org.liv2train.app.student.training.centre.locator.request.dto.TrainingCentreRequestDTO;
@@ -26,6 +27,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+
+/**
+ * TrainingCentreController is a controller class. 
+ * It creates a trainingCentre. 
+ * It gets a list of all trainingCentre.
+ * 
+ * @author Divanshu_Goel
+ *
+ */
 @RestController
 @RequestMapping("/api/trainingcentre")
 public class TrainingCentreController {
@@ -35,6 +45,19 @@ public class TrainingCentreController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(TrainingCentreController.class);
 
+	/**
+	 * creates new trainingCentre when trainingCentreRequestDTO is passed
+	 * as a input parameter
+	 *
+	 * @param trainingCentreRequestDTO {@link -> TrainingCentreRequestDTO}.
+	 * @return a {@code ResponseEntity} instance.
+	 * @throws AppException in case the TrainingCentreRequestDTO contains email that
+	 * already exists. 
+	 * @since 1.0
+	 * @version 1.0
+	 */
+	
+	
 	@PostMapping("/save")
 	public ResponseEntity<TrainingCentreResponseDTO> createTrainingCentre(
 			@Valid @RequestBody TrainingCentreRequestDTO trainingCentreRequestDTO) throws Exception {
@@ -52,6 +75,14 @@ public class TrainingCentreController {
 
 	}
 
+	/**
+	 * Returns all instances of the TrainingCentre in a list.
+	 * 
+	 * @return a {@code ResponseEntity} instance.
+	 * @since 1.0
+	 * @version 1.0
+	 */ 
+	
 	@GetMapping("/all")
 	public ResponseEntity<List<TrainingCentreResponseDTO>> getAllTrainingCentres() {
 		LOGGER.info("Inside getAllTrainingCentres");
@@ -65,6 +96,14 @@ public class TrainingCentreController {
 		return ResponseEntity.status(HttpStatus.OK).body(trainingCentreResponseDTOList);
 
 	}
+	/**
+	 * prepareResponse is a method that maps fields of trainingCentre object
+	 * to trainingCentreResponseDTO object
+	 * @param createdTrainingCentre {@link -> TrainingCentre}.
+	 * @return trainingCentreResponseDTO {@link -> TrainingCentreResponseDTO}.
+	 * @since 1.0
+	 *  @version 1.0
+	 */
 
 	private TrainingCentreResponseDTO prepareResponse(TrainingCentre createdTrainingCentre) {
 		TrainingCentreResponseDTO trainingCentreResponseDTO = new TrainingCentreResponseDTO();

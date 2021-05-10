@@ -7,6 +7,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * ErrorResponseDTO is the POJO class for sending the response back if an
+ * exception occurs. 
+ * It sends trainingCentreResponseDTO object.
+ * 
+ * @author Divanshu_Goel
+ * 
+ */
+
 @Getter
 @Setter
 @NoArgsConstructor

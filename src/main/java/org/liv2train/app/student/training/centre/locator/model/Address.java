@@ -13,6 +13,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+
+/**
+ * Address is the POJO class for sending
+ * address object to the TrainingCentre.
+ * 
+ * @author Divanshu_Goel
+ * 
+ */
+
+
 @Getter
 @Setter
 @NoArgsConstructor
