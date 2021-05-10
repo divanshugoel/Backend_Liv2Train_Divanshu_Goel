@@ -1,2 +1,2 @@
 # Student-Training-Centre-Locator
-Locates student training centres
+Information of all student training centres registered in here.
