@@ -4,8 +4,8 @@ import org.liv2train.app.student.training.centre.locator.model.Address;
 import org.liv2train.app.student.training.centre.locator.response.dto.AddressDTO;
 
 /**
- * AddressMapper is a class that maps fields of model objects
- * and request objects 
+ * AddressMapper is a class that maps fields of model objects and request
+ * objects
  * 
  * @author Divanshu_Goel
  *
@@ -14,8 +14,8 @@ import org.liv2train.app.student.training.centre.locator.response.dto.AddressDTO
 public class AddressMapper {
 
 	/**
-	 * mapToVO is a method that maps fields of addressDTO object
-	 * to address object.
+	 * mapToVO is a method that maps fields of addressDTO object to address object.
+	 * 
 	 * @see TrainingCentreServiceImpl
 	 * @param addressDTO {@link -> AddressDTO}
 	 * @return address {@link -> Address}
@@ -31,6 +31,5 @@ public class AddressMapper {
 		address.setCity(addressDTO.getCity());
 		return address;
 	}
-	
 
 }

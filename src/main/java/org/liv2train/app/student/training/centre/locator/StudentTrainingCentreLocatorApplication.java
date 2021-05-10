@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- *  StudentTrainingCentreLocatorApplication is the main class.
- *  
+ * StudentTrainingCentreLocatorApplication is the main class.
+ * 
  * @author Divanshu_Goel
  *
  */

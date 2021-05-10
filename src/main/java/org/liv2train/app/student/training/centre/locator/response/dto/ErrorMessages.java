@@ -1,7 +1,7 @@
 package org.liv2train.app.student.training.centre.locator.response.dto;
+
 /**
- * It sends custom error codes and error messages
- * when exception occurs.
+ * It sends custom error codes and error messages when exception occurs.
  * 
  * 
  * @author Divanshu_Goel
@@ -9,13 +9,13 @@ package org.liv2train.app.student.training.centre.locator.response.dto;
  */
 
 public enum ErrorMessages {
-	
-/**
- * 
- * EMAIL_ALREADY_EXISTS sends error code 101 and error message email already exist
- * if trainingCentre already exists with this email. 
- * 
- */
+
+	/**
+	 * 
+	 * EMAIL_ALREADY_EXISTS sends error code 101 and error message email already
+	 * exist if trainingCentre already exists with this email.
+	 * 
+	 */
 	EMAIL_ALREADY_EXISTS(101, "Email already exists");
 
 	private Integer errorCode;

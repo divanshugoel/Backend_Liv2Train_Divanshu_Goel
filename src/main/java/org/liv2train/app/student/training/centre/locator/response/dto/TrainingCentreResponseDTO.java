@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * TrainingCentreResponseDTO is the POJO class for sending the response back
- * on success.
- * It sends trainingCentre responseDTO object. 
+ * TrainingCentreResponseDTO is the POJO class for sending the response back on
+ * success. It sends trainingCentre responseDTO object.
  * 
  * @author Divanshu_Goel
  * 

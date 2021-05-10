@@ -19,11 +19,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 /**
- * TrainingCentreServiceImpl is a service class. 
- * It creates a trainingCentre. 
- * It gets a list of all trainingCentre.
+ * TrainingCentreServiceImpl is a service class. It creates a trainingCentre. It
+ * gets a list of all trainingCentre.
  * 
  * @author Divanshu_Goel
  *
@@ -38,20 +36,20 @@ public class TrainingCentreServiceImpl implements TrainingCentreService {
 	AddressRepository addressRepository;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(TrainingCentreServiceImpl.class);
-	
-/**
- * creates new trainingCentre when trainingCentreRequestDTO is passed
- * as a input parameter
- *
- * @param trainingCentreRequestDTO {@link -> TrainingCentreRequestDTO}.
- * @return savedtrainingCentre {@link -> TrainingCentre}.
- * @throws AppException in case the TrainingCentreRequestDTO contains email that
- * already exists. 
- * @since 1.0
- * @version 1.0
- * 
- */
- 
+
+	/**
+	 * creates new trainingCentre when trainingCentreRequestDTO is passed as a input
+	 * parameter
+	 *
+	 * @param trainingCentreRequestDTO {@link -> TrainingCentreRequestDTO}.
+	 * @return savedtrainingCentre {@link -> TrainingCentre}.
+	 * @throws AppException in case the TrainingCentreRequestDTO contains email that
+	 *                      already exists.
+	 * @since 1.0
+	 * @version 1.0
+	 * 
+	 */
+
 	@Override
 	public TrainingCentre createTrainingCentre(TrainingCentreRequestDTO trainingCentreRequestDTO) throws Exception {
 
@@ -68,13 +66,14 @@ public class TrainingCentreServiceImpl implements TrainingCentreService {
 		LOGGER.info("Training centre created with id ={}", savedtrainingCentre.getId());
 		return savedtrainingCentre;
 	}
-/**
- * Returns all instances of the TrainingCentre in a list.
- * 
- * @return trainingCentreList {@link -> List}.
- * @since 1.0
- * @version 1.0
- */
+
+	/**
+	 * Returns all instances of the TrainingCentre in a list.
+	 * 
+	 * @return trainingCentreList {@link -> List}.
+	 * @since 1.0
+	 * @version 1.0
+	 */
 
 	@Override
 	public List<TrainingCentre> getAllTrainingCentre() {
@@ -85,16 +84,16 @@ public class TrainingCentreServiceImpl implements TrainingCentreService {
 		}
 		return trainingCentreList;
 	}
-	
-/**
- * 
- * @param trainingCentre {@link -> TrainingCentre}
- * @return a boolean value
- * 
- * @since 1.0
- * @version 1.0
- * 
- */
+
+	/**
+	 * 
+	 * @param trainingCentre {@link -> TrainingCentre}
+	 * @return a boolean value
+	 * 
+	 * @since 1.0
+	 * @version 1.0
+	 * 
+	 */
 
 	private boolean existByEmailId(TrainingCentre trainingCentre) {
 		Optional<TrainingCentre> trainingCentreEmail = trainingCentreRepository.findByEmail(trainingCentre.getEmail());

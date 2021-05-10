@@ -1,28 +1,31 @@
 package org.liv2train.app.student.training.centre.locator.service;
 
 import java.util.List;
+
+import org.liv2train.app.student.training.centre.locator.exception.AppException;
 import org.liv2train.app.student.training.centre.locator.model.TrainingCentre;
 import org.liv2train.app.student.training.centre.locator.request.dto.TrainingCentreRequestDTO;
+import org.liv2train.app.student.training.centre.locator.service.impl.TrainingCentreServiceImpl;
 
 /**
- * TrainingCentreService is an interface for service operations for a specific result.
+ * TrainingCentreService is an interface for service operations for a specific
+ * result.
  * 
  * @author Divanshu_Goel
  */
 public interface TrainingCentreService {
 	/**
-	 * creates new trainingCentre when trainingCentreRequestDTO is passed
-	 * as a input parameter
+	 * creates new trainingCentre when trainingCentreRequestDTO is passed as a input
+	 * parameter
 	 *
 	 * @see TrainingCentreServiceImpl
 	 * @param trainingCentreRequestDTO {@link -> TrainingCentreRequestDTO}.
 	 * @return TrainingCentre {@link -> TrainingCentre}.
 	 * @throws AppException in case the TrainingCentreRequestDTO contains email that
-	 * already exists. 
+	 *                      already exists.
 	 */
 	public TrainingCentre createTrainingCentre(TrainingCentreRequestDTO trainingCentreRequestDTO) throws Exception;
-	
-	
+
 	/**
 	 * Returns all instances of the TrainingCentre in a list.
 	 *
@@ -31,5 +34,5 @@ public interface TrainingCentreService {
 	 *
 	 */
 	public List<TrainingCentre> getAllTrainingCentre();
-	
+
 }
