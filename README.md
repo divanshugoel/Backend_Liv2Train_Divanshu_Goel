@@ -23,7 +23,7 @@ Student-Training-Centre-Locator is a Spring Boot (version 2.4.5) application tha
 2021-05-10 17:31:23.097  INFO 19387 --- [           main] org.liv2train.app.student.training.centre.locator.StudentTrainingCentreLocatorApplication        : Started Application in 22.285 seconds (JVM running for 23.032)
 ```
 
-* And the REST APIs can be accessed over the following base-path :
+* REST APIs can be accessed over the following base-path :
 
      ```http://localhost:8080/api/trainingcentre```
 
